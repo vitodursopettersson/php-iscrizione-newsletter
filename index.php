@@ -12,20 +12,47 @@
 </head>
 
 <body>
-    <form action="index.php" method="GET">
-        <label for=""></label>
-        <input type="text" name="email" id="email">
-        <button>Sumbit</button>
-    </form>
+    <div class="d-flex align-items-center justify-content-center vh-100">
+        <div class="card" style="width: 30rem;">
+            <img src="https://www.sendx.io/hubfs/SendPost_August2021/images/What-is-s-Newsletter-Definition-Examples-and-Design-Ideas.png" class="card-img-top" alt="...">
+            <div class="card-body">
+                <form action="index.php" method="GET">
+                    <h5 class="card-title">Iscriviti alla newsletter</h5>
+                    <p class="card-text">Non ti preoccupare, ti manderemo massimo 10 email al giorno, o forse 20.</p>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email:</label>
+                        <input type="text" class="form-control" id="email" name="email">
+                        <div id="emailHelp" class="form-text">Venderemo la tua email a chiunque.</div>
 
-    <?php
-    $email = $_GET['email'];
+                        <?php
+                        $email = $_GET['email'];
 
-    if (strpos($email, '@', 1) && strpos($email, '.', 1)) {
-        echo $email;
-    };
+                        if (isset($email)) {
+                            if (strpos($email, '@', 1) && strpos($email, '.', 1)) {
+                                echo ' <div class="alert alert-success mt-2" role="alert">
+                            ✅ Iscrizione effettuata!
+                        </div>';
+                            } else {
+                                echo ' <div class="alert alert-danger mt-2" role="alert">
+                            ❌ Inserisci un email valida
+                        </div>';
+                            };
+                        }
 
-    ?>
+                        ?>
+
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Accetta o no, tanto lo faremo comunque</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100 py-2 mt-2">Inizia lo spam</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
 </body>
 
 </html>
