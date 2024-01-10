@@ -12,7 +12,20 @@
 </head>
 
 <body>
+    <form action="index.php" method="GET">
+        <label for=""></label>
+        <input type="text" name="email" id="email">
+        <button>Sumbit</button>
+    </form>
 
+    <?php
+    $email = $_GET['email'];
+
+    if (strpos($email, '@', 1) && strpos($email, '.', 1)) {
+        echo $email;
+    };
+
+    ?>
 </body>
 
 </html>
