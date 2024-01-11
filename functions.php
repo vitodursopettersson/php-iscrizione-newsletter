@@ -1,5 +1,4 @@
 <?php
-$email = $_GET['email'];
 
 if (isset($email)) {
     if (strpos($email, '@', 1) && strpos($email, '.', 1)) {

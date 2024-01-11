@@ -1,3 +1,9 @@
+<?php
+
+$email = $_GET['email'];
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,7 +27,7 @@
                     <p class="card-text">Non ti preoccupare, ti manderemo massimo 10 email al giorno, o forse 20.</p>
                     <div class="mb-3">
                         <label for="email" class="form-label">Email:</label>
-                        <input type="text" class="form-control" id="email" name="email">
+                        <input type="text" class="form-control" id="email" name="email" value="<?php echo $email ?>">
                         <div id="emailHelp" class="form-text">Venderemo la tua email a chiunque.</div>
 
                         <?php
