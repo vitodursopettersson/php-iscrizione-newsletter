@@ -1,7 +1,7 @@
 <?php
-
+require_once __DIR__ . '/functions.php';
+$email = NULL;
 $email = $_GET['email'];
-
 ?>
 
 <!DOCTYPE html>
@@ -30,9 +30,8 @@ $email = $_GET['email'];
                         <input type="text" class="form-control" id="email" name="email" value="<?php echo $email ?>">
                         <div id="emailHelp" class="form-text">Venderemo la tua email a chiunque.</div>
 
-                        <?php
-                        include 'functions.php'
-                        ?>
+                        <!-- Check Email Php -->
+                        <?php checkEmail($email) ?>
 
                     </div>
                     <div class="mb-3 form-check">
@@ -44,7 +43,6 @@ $email = $_GET['email'];
             </div>
         </div>
     </div>
-
 
 </body>
 
